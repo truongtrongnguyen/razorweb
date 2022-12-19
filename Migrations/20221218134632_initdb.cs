@@ -1,10 +1,9 @@
 ﻿using System;
 using Bogus;
 using Microsoft.EntityFrameworkCore.Migrations;
-using razorweb.modles;
 
 #nullable disable
-
+using razorweb.models;
 namespace TichhopEntityWorkVaoASPNetConnectSql.Migrations
 {
     /// <inheritdoc />

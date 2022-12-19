@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace razorweb.modles;
+namespace razorweb.models;
 
 public class MyBlogContext : DbContext
 {

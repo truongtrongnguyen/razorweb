@@ -1,0 +1,47 @@
+@page "/xemblog/{id:int}"
+@model Tich_hop_EntityWork_Vao_ASPNet_Connect_Sql.Pages_Blog.DetailsModel
+
+@{
+    ViewData["Title"] = @Model.Article.Title;
+}
+
+<h1>@Model.Article.Title</h1>
+<p>
+    <i>
+        @Html.DisplayFor(models => models.Article.Created)
+    </i>
+</p>
+<hr>
+<p>@Html.Raw(Model.Article.Content)</p>
+<hr >
+
+@* <div>
+    <h4>Article</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Article.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Article.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Article.Created)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Article.Created)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Article.Content)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Article.Content)
+        </dd>
+    </dl>
+</div> *@
+
+
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Article.id">Chỉnh sửa</a> |
+    <a asp-page="./Index">Danh sách bài viết</a>
+</div>

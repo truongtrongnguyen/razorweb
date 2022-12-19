@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using razorweb.modles;
+using razorweb.models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,12 +34,25 @@ app.MapRazorPages();
 app.Run();
 
 /*
+    CREATE, READ, UPDATE, DELETE (CRUD)
+    Trong .NEt có hỗ trợ lệnh tạo: 
+        - m:        theo Model nào                  VD: razorweb.models.Article      --> Nó thuộc namespace nào
+        - dc:       DatabaseContext                 VD: razorweb.models.MyBlogContext 
+        - outDir    Thư mục lưu trữ file tạo ra     VD: Pages/Blog
+        - Tham số mặc định: -udl -referenceScriptLibraries
+
+        dotnet aspnet-codegenerator razorpage -m razorweb.models.Article -dc razorweb.models.MyBlogContext -outDir Pages/Blog -udl --referenceScriptLibraries
+
+
+
+    Mỗi lần clone từ git về ta phải cài các package
     Để làm việc với EF, hãy thêm các công cụ vào dotnet cũng như tích hợp các Package cần thiết, thực hiện các lệnh sau:
         dotnet tool install --global dotnet-ef
-        dotnet tool install --global dotnet-aspnet-codegenerator
-        dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+        dotnet tool install --global dotnet-aspnet-codegenerator --version 6.0.0            
+        dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 6.0.0
         dotnet add package Microsoft.EntityFrameworkCore.Design
         dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 
         - Xoá Database: dotnet ef database drop -f
+
 */

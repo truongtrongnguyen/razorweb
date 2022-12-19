@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using razorweb.modles;
+using razorweb.models;
 
 namespace Tich_hop_EntityWork_Vao_ASPNet_Connect_Sql.Pages;
 
